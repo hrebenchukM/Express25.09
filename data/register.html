@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(212, 211, 211);
+            margin: 0;
+        }
+
+      
+
+        .card {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+        }
+      
+       
+        .btn {
+            background-color: #6e6e6f;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+        }
+        .btn:hover {
+            background-color: #5c5b5b;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="text-center">Регистрация</h2>
+        <form action="/register" method="POST">
+            <p>
+                <label>User ID [5 to 7 characters]:</label>
+                <input type="text" name="login" required />
+            </p>
+            <p>
+                <label>Password [7 to 12 characters]:</label>
+                <input type="password" name="password" required />
+            </p>
+            <p>
+                <label>Name [Alphabet characters]:</label>
+                <input type="text" name="name" required />
+            </p>
+            <p>
+                <label>Address [Alphanumeric characters]:</label>
+                <input type="text" name="address" required />
+            </p>
+            <p>
+                <label>Age:</label>
+                <input type="number" name="age" required />
+            </p>
+            <p>
+                <label>Country [Must select a country]:</label>
+                <select name="country" required>
+                    <option value="">Please select a country</option>
+                    <option value="UA">Ukraine</option>
+                </select>
+            </p>
+            <p>
+                <label>ZIP Code [Alphanumeric characters]:</label>
+                <input type="text" name="zip" required />
+            </p>
+            <p>
+                <label>Email [Valid email]:</label>
+                <input type="email" name="email" required />
+            </p>
+            <p>
+                <label>Sex [Select Male or Female]:</label>
+                <label><input type="radio" name="gender" value="male" required /> Male</label>
+                <label><input type="radio" name="gender" value="female" required /> Female</label>
+            </p>
+            <p>
+                <label>Language [Optional]:</label>
+                <label><input type="checkbox" name="language" value="English" /> English</label>
+                <label><input type="checkbox" name="language" value="Ukrainian" /> Ukrainian</label>
+                <label><input type="checkbox" name="language" value="Russian" /> Russian</label>
+            </p>
+            <p>
+                <label>About [Optional]:</label>
+                <textarea name="about"></textarea>
+            </p>
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+        
+    </div>
+</body>
+</html>
